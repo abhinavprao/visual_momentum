@@ -22,6 +22,10 @@ Now for the hard part. You may have often tried to visualize a higher dimensiona
 
 You can think of the body as a bead on a wire. The shape of the wire is $f(x)$. At any point the body experiences a force in the direction opposite to the slope of the wire, proportional to that slope. Simultaneously it also experiences a drag force opposite to the slope that is proportional to the speed of the bead $|\dot{x}\hat{i} + \dot{y}\hat{i}|$
 
+
+
+(YET to complete)
+
 ![alt text](<Newtons World.gif>)
 
 ![alt text](<Sticky World.gif>)
