@@ -5,7 +5,7 @@
 ## Mechanics
 ---
 Consider a body at location $x$ with a force $f$ acting on it. According to Newton said,
-$$m\ddnot{x} = f$$
+$$m\ddot{x} = f$$
 
 Now $f$ could be a single force, or it could be a vector addition of all the multiple forces acting on the body. It could also be a function of $x$, like a spring. Let's consider two forces, one which is a function of space $x$ and another a function of speed $\dot{x}$
 
