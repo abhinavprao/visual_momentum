@@ -4,6 +4,54 @@
 
 <it>"For now — momentum is an algorithm for the book."</it>
 
+Reference: [ME697 Advanced Scientific Machine Learning](https://github.com/PredictiveScienceLab/advanced-scientific-machine-learning)
+
+## TLDR
+
+If the space in which a object lies has a potential field, it exerts a force on the object. The force acting at any point is proportional to $\nabla_x f(x)$ if the potential energy is given by $f(x)$.<br><br>
+
+Consider two worlds:<br>
+1. Sticky World: The velocity of the object is proportional to the net force.
+2. Newton's World: The acceleration of the object is proportional to the net force.
+
+We imagine these world's in 1D and visualize them in 2D. On the X axis you have the position of the object. On Y axis you have the potential energy. <br><br>
+
+Here is how the object moves in `Sticky World':<br>
+
+![alt text](<Sticky World.gif>)
+<br><br>
+Here is how the object moves in `Newton's World':<br>
+
+![alt text](<Newtons World.gif>)
+Note: We have also employed a drag force here, acting in direction opposing the momentum, proportional to it.
+<br><br>
+**Observations:**<br>
+1. There is no inertia in the sticky world. Any maxima, minima or inflection  ($\nabla_x f(x) = 0$) makes the velocity/momentum of the object zero. The object stops.
+2. In newton's world, there is inertia. When force is zero, the object stops accelerating but it still moves.
+3. Newton's world has better chances of a object not getting stuck in shallows and inflections.
+
+**Conclusions:**<br>
+1. The sticky world is an analogy to gradient descent:
+$$m\dot{x} \propto -\nabla_x f$$
+$$\dot{x} \propto -\nabla_x f$$
+$$\lim_{{\delta t} \to 0}  \frac{x_{t+\delta t} - x_t}{\delta t} \propto -\nabla_x f$$
+
+Considering a discrete equivalent case:
+$$\frac{x_{n+1} - x_n}{\eta} = -\nabla_x f$$
+$$x_{n+1} = x_n - \eta\nabla_x f$$
+<br><br><br>
+2. Newton's world is an analogy to gradient descent with momentum:
+$$m\ddot{x} \propto \nabla_x f - \nu \dot{x}$$
+
+This can be converted into a ODE, by chosing another variable $v = \dot{x}$, then solved, and then discretized as above, to show:
+
+$$x_{n+1} = x_n + v_{n+1}$$
+$$v_{n+1} = \beta v_t - \alpha \nabla f(x_t)$$
+
+This is gradient descent with momentum! <br>
+Visualizing optimization as a mechanics problem led to a better algorithm.
+
+<br><br><br><br>
 ## Newtonion Mechanics
 
 For now, consider a body of mass $m$ at location $\textbf{x}$ with a force $\textbf{f}$ acting on it. Then Newton said we can say,
@@ -26,9 +74,9 @@ You can think of the body as a bead on a wire. The shape of the wire is $f(x)$. 
 
 (YET to complete)
 
-![alt text](<Newtons World.gif>)
 
-![alt text](<Sticky World.gif>)
+
+
 
 ![alt text](Gravity.gif)
 
