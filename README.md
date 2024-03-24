@@ -6,7 +6,7 @@
 
 Reference: [ME697 Advanced Scientific Machine Learning](https://github.com/PredictiveScienceLab/advanced-scientific-machine-learning)
 
-## TLDR
+## Summary
 
 If the space in which a object lies has a potential field, it exerts a force on the object. The force acting at any point is proportional to $\nabla_x f(x)$ if the potential energy is given by $f(x)$.<br><br>
 
@@ -64,6 +64,10 @@ Doesn't this look identical to newtons world? Again, note that these are two com
 
 Visualizing optimization as a mechanics problem led to a better algorithm.
 <br><br><br><br>
+**Incomplete**
+
+## Full explanation
+
 ## Newtonion Mechanics
 
 For now, consider a body of mass $m$ at location $\textbf{x}$ with a force $\textbf{f}$ acting on it. Then Newton said we can say,
