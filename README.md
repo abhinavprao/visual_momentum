@@ -54,6 +54,7 @@ $$m\ddot{x} \propto \nabla_x f - \nu \dot{x}$$
 This can be converted into a ODE, by chosing another variable $v = \dot{x}$, then solved, and then discretized as above, to show:
 
 $$x_{n+1} = x_n + v_{n+1}$$
+where, 
 $$v_{n+1} = \beta v_n - \alpha \nabla f(x_n)$$
 
 
