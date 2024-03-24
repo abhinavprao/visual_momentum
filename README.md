@@ -8,7 +8,7 @@ Reference: [ME697 Advanced Scientific Machine Learning](https://github.com/Predi
 
 ## Summary
 
-If the space in which a object lies has a potential field, it exerts a force on the object. The force acting at any point is proportional to $\nabla_x f(x)$ if the potential energy is given by $f(x)$.<br><br>
+Forget all about optimization and gradient descent for now and focus on basic mechanics.<br> If a object lies in a potential energy field, it experiences a force. The force acting at any point $x$ is proportional to $\nabla_x f(x)$ if the potential energy is given by $f(x)$.<br><br>
 
 Consider two worlds:<br>
 1. Sticky World: The velocity of the object is proportional to the net force.
