@@ -31,7 +31,7 @@ Note: We have also employed a drag force here, acting in direction opposing the 
 3. Newton's world has better chances of a object not getting stuck in shallows and inflections.
 
 **Conclusions:**<br>
-1. The sticky world is an analogy to gradient descent:
+1. The sticky world is a direct analogy to gradient descent:
 $$m\dot{x} \propto -\nabla_x f$$
 $$\dot{x} \propto -\nabla_x f$$
 $$\lim_{{\delta t} \to 0}  \frac{x_{t+\delta t} - x_t}{\delta t} \propto -\nabla_x f$$
@@ -39,6 +39,14 @@ $$\lim_{{\delta t} \to 0}  \frac{x_{t+\delta t} - x_t}{\delta t} \propto -\nabla
 Considering a discrete equivalent case:
 $$\frac{x_{n+1} - x_n}{\eta} = -\nabla_x f$$
 $$x_{n+1} = x_n - \eta\nabla_x f$$
+
+Let's just implement gradient descent on the potential energy function.
+
+![alt text](<Gradient Descent - slow.gif>)
+
+Doesn't this look identical to sticky world? It is important to note that these are two completely different solvers. The sticky world simulation was made by solving a ODE of a bead on a wire. This is just a iterative optimization animation. 
+
+
 <br><br><br>
 2. Newton's world is an analogy to gradient descent with momentum:
 $$m\ddot{x} \propto \nabla_x f - \nu \dot{x}$$
@@ -49,8 +57,12 @@ $$x_{n+1} = x_n + v_{n+1}$$
 $$v_{n+1} = \beta v_t - \alpha \nabla f(x_t)$$
 
 This is gradient descent with momentum! <br>
-Visualizing optimization as a mechanics problem led to a better algorithm.
 
+![alt text](<Gradient Descent with momentum.gif>)
+
+Doesn't this look identical to newtons world? Again, note that these are two completely different solvers. 
+
+Visualizing optimization as a mechanics problem led to a better algorithm.
 <br><br><br><br>
 ## Newtonion Mechanics
 
